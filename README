@@ -11,31 +11,22 @@ This project shows that static-analysis can be used to create a fairly accurate 
 However, this is not conclusive enough evidence that this static-analysis model should be the final result, a more accurate classifier using both static and dynamic analysis neural networks
 would provide the best outcome of data. This is because a program cannot be known to be malware until it has been executed hence why using both will provide the best outcome. 
 
-The malware dataset contains the images of malware family names as mentioned in Tab.3 of the paper "Malware Images: Visualization and Automatic Classification" (http://dl.acm.org/citation.cfm?id=2016908)
-The goodware dataset is from a windows computer with varying files that have been taken. The process of taking these files will be in the user guide for the dissertation. 
-
 Credit to ANKIT SACHAN (https://cv-tricks.com/tensorflow-tutorial/training-convolutional-neural-network-for-image-classification/) and the team at SAVRAM (http://sarvam.ece.ucsb.edu/about) for help with programming and understanding concepts.
 
-Please look forward to the full dissertation. 
+Training set, Testing set and VirtualEnviorment setup are not included. 
 
-Small user guide - do all in Terminal. 
+1. Ensure Python 2.7.1, tensorflow 1.13, openCV, numpy, sklearn, os, glob, sys, argparse, array, PIL is installed
 
-1. Invoke the virtualenviorment in the folder source
-source venv/bin/activate
-
-2. Ensure Python 2.7.1, tensorflow 1.13, openCV, numpy, sklearn, os, glob, sys, argparse, array, PIL is installed
-This should already be setup in the virtual enviorment. 
-
-3. To train the model, make sure the datasets you want used are in the correct directories
+2. To train the model, make sure the datasets you want used are in the correct directories
 python train.py 
 
-4. To convert a single file from a file to an image, use convert_single.py [arg]
+3. To convert a single file from a file to an image, use convert_single.py [arg]
 python convert_single.py [arg]
 
-5. To classify/predict whether the file is benign or malicious
+4. To classify/predict whether the file is benign or malicious
 python predict.py [arg]
 
-6. To view results on TensorBoard
+5. To view results on TensorBoard
 TensorBoard --logdir [path to directory (in the train.py file it is automatically set) of logs]
 
 
